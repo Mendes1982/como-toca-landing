@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Toca | Escola de Música do Futuro - Matrículas Abertas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0c0614',
+              purple: '#1a0b2e',
+              deep: '#250f40',
+              gold: '#ffb703',
+              goldLight: '#ffd166',
+              goldGlow: '#e59800',
+              accent: '#ff006e',
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0c0614;
+      color: #f8fafc;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    .heading-font {
+      font-family: 'Outfit', sans-serif;
+    }
+    .glow-gold {
+      box-shadow: 0 0 35px rgba(255, 183, 3, 0.35);
+    }
+    .glow-purple {
+      box-shadow: 0 0 50px rgba(123, 44, 191, 0.25);
+    }
+    .gradient-gold-text {
+      background: linear-gradient(135deg, #FFE29F 0%, #FFAE34 50%, #ED7E00 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .pulse-btn {
+      animation: pulse-gold 2s infinite;
+    }
+    @keyframes pulse-gold {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 183, 3, 0.7); }
+      70% { transform: scale(1.02); box-shadow: 0 0 0 16px rgba(255, 183, 3, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 183, 3, 0); }
+    }
+    .video-card-frame {
+      border: 2px solid rgba(255, 183, 3, 0.4);
+      border-radius: 24px;
+      position: relative;
+    }
+  </style>
+</head>
+<body class="selection:bg-brand-gold selection:text-black">
+
+  <!-- TOP BAR DE URGÊNCIA -->
+  <div class="bg-gradient-to-r from-amber-600 via-brand-gold to-yellow-400 text-black py-2.5 px-4 text-center font-bold text-xs md:text-sm tracking-wide shadow-md flex items-center justify-center gap-2">
+    <span class="inline-block w-2.5 h-2.5 rounded-full bg-red-600 animate-ping"></span>
+    <span>🔥 MATRÍCULAS ABERTAS COM ATÉ 40% OFF + 1 AULA EXPERIMENTAL GRATUITA!</span>
+    <span class="hidden md:inline bg-black/10 px-2 py-0.5 rounded text-xs font-mono ml-2">CÓDIGO ATIVO: <strong id="topCouponDisplay">GOLD-DIAMOND-STUDIOS</strong></span>
+  </div>
+
+  <!-- HEADER -->
+  <header class="max-w-6xl mx-auto px-4 py-6 flex items-center justify-between border-b border-white/10">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-gold to-yellow-200 flex items-center justify-center shadow-lg">
+        <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+      </div>
+      <div>
+        <span class="text-xl md:text-2xl font-black heading-font tracking-tight text-white block leading-none">COMO TOCA</span>
+        <span class="text-[10px] md:text-xs tracking-widest text-brand-goldLight uppercase font-medium">O Futuro dos Seus Sonhos</span>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <a href="#planos" class="hidden sm:inline-block text-xs font-semibold uppercase tracking-wider text-white/80 hover:text-brand-gold transition py-2 px-4">Ver Planos</a>
+      <a id="headerWhatsappBtn" href="https://wa.me/5511918476778?text=Olá%20Samuel!%20Vim%20pela%20página%20de%20vendas%20com%20o%20código%20GOLD-DIAMOND-STUDIOS%20e%20quero%20minha%20aula%20experimental%20gratuita!" target="_blank" class="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-bold text-xs md:text-sm py-2.5 px-4 md:px-5 rounded-full flex items-center gap-2 shadow-lg transition duration-200">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+        <span>Central de Atendimento (Samuel)</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION COM A VSL -->
+  <main class="max-w-4xl mx-auto px-4 pt-10 pb-16 text-center">
+    
+    <!-- TAG DO TOPO -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-deep/80 border border-brand-gold/30 text-brand-gold text-xs font-semibold mb-6">
+      <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+      Aulas em Domicílio ou 100% Online Interativas
+    </div>
+
+    <!-- HEADLINE -->
+    <h1 class="text-3xl md:text-5xl lg:text-6xl font-black heading-font leading-tight md:leading-tight mb-4">
+      Aprenda a Tocar Seu Instrumento Favorito <br>
+      <span class="gradient-gold-text">No Seu Ritmo e Sem Sair de Casa</span>
+    </h1>
+
+    <p class="text-slate-300 text-sm md:text-lg max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+      Aulas particulares individuais ao vivo com professores especialistas. 
+      <strong class="text-white">Todas as suas aulas ficam 100% gravadas no seu portal do aluno</strong> para você rever quando e onde quiser.
+    </p>
+
+    <!-- PLAYER DA VSL (O VÍDEO DO REEL) -->
+    <div class="video-card-frame glow-gold bg-black/60 p-2 sm:p-4 max-w-sm sm:max-w-md mx-auto mb-8 overflow-hidden backdrop-blur-md">
+      <div class="relative w-full aspect-[9/16] rounded-2xl overflow-hidden bg-zinc-950 flex items-center justify-center shadow-2xl">
+        <video id="vslVideo" class="w-full h-full object-cover" controls playsinline preload="metadata" poster="frames/frame_03.jpg">
+          <source src="vsl_video.mp4" type="video/mp4">
+          Seu navegador não suporta a reprodução de vídeo.
+        </video>
+      </div>
+      <div class="pt-3 pb-1 text-center">
+        <p class="text-xs text-brand-goldLight font-medium flex items-center justify-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/></svg>
+          Assista ao vídeo de 27s para entender por que a Como Toca é diferente!
+        </p>
+      </div>
+    </div>
+
+    <!-- BOTÕES CTA PRINCIPAIS -->
+    <div class="max-w-md mx-auto space-y-3">
+      <a id="mainCtaBtn" href="https://wa.me/5511918476778?text=Olá%20Samuel!%20Vim%20pela%20página%20de%20vendas%20com%20o%20código%20GOLD-DIAMOND-STUDIOS%20e%20quero%20minha%20aula%20experimental%20gratuita!" target="_blank" class="pulse-btn flex items-center justify-center gap-2 w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-amber-500 via-brand-gold to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-black font-extrabold text-base md:text-lg shadow-xl transition transform active:scale-95 uppercase tracking-wide">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+        <span>Falar com Samuel (Central COMO TOCA)</span>
+      </a>
+      <a href="#planos" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 hover:text-brand-gold transition py-1">
+        Ou role para ver todos os planos e preços ↓
+      </a>
+      <p class="text-[12px] text-slate-400 flex items-center justify-center gap-2">
+        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        Central de Atendimento • Samuel Medeiros 🎻🎸 • Matrícula Grátis
+      </p>
+    </div>
+
+  </main>
+
+  <!-- SEÇÃO DE DIFERENCIAIS (A CEREJA DO BOLO DO VÍDEO) -->
+  <section class="bg-brand-purple/40 border-y border-white/5 py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl md:text-4xl font-extrabold heading-font mb-3">
+          Por que estudar na <span class="gradient-gold-text">Como Toca?</span>
+        </h2>
+        <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
+          Esqueça cursos engessados com vídeos gravados há 5 anos. Criamos uma escola 100% viva e sob medida para a sua rotina.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- CARD 1 -->
+        <div class="bg-zinc-900/80 border border-white/10 rounded-2xl p-6 hover:border-brand-gold/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-brand-gold flex items-center justify-center mb-4 text-2xl font-black">
+            1
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Aulas Ao Vivo & 100% Individuais</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Professor particular dedicado exclusivamente a você. Correção imediata de postura, dedilhado e técnica em tempo real.
+          </p>
+        </div>
+
+        <!-- CARD 2: CEREJA DO BOLO -->
+        <div class="bg-gradient-to-b from-brand-deep to-zinc-900 border-2 border-brand-gold/60 rounded-2xl p-6 relative shadow-xl">
+          <div class="absolute -top-3 right-4 bg-brand-gold text-black text-[10px] font-extrabold px-3 py-1 rounded-full uppercase">
+            A Cereja do Bolo 🍒
+          </div>
+          <div class="w-12 h-12 rounded-xl bg-brand-gold text-black flex items-center justify-center mb-4 text-2xl font-black">
+            2
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Aulas Gravadas no Portal</h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Todas as aulas feitas com os professores da escola são salvas no seu portal do aluno para você treinar e rever sempre que precisar.
+          </p>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="bg-zinc-900/80 border border-white/10 rounded-2xl p-6 hover:border-brand-gold/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-brand-gold flex items-center justify-center mb-4 text-2xl font-black">
+            3
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Domicílio ou Online</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Você escolhe: se prefere o professor presencial na sua residência ou a flexibilidade do ambiente virtual de alta definição.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LISTA DE 18 INSTRUMENTOS -->
+  <section class="max-w-5xl mx-auto py-16 px-4 text-center">
+    <h2 class="text-2xl md:text-3xl font-extrabold heading-font mb-2">Qual instrumento você quer dominar?</h2>
+    <p class="text-slate-400 text-sm mb-8">Temos professores qualificados para todas as idades e estilos musicais:</p>
+
+    <div class="flex flex-wrap justify-center gap-2.5 max-w-3xl mx-auto">
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🎸 Violão</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">⚡ Guitarra</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🎹 Piano</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🎼 Teclado</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🎤 Canto</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🎻 Violino</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🥁 Bateria</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🎸 Contrabaixo</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🪕 Cavaquinho</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🏖️ Ukulele</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🎷 Saxofone</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🪗 Acordeon</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🎶 Flauta Transversal</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🎺 Trompete</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🎻 Violoncelo</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🎻 Viola Clássica</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🪕 Banjo</span>
+      <span class="bg-white/5 border border-white/10 hover:border-brand-gold/50 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition cursor-default">🎵 Clarinete</span>
+    </div>
+  </section>
+
+  <!-- TABELA DE PLANOS & OFERTAS (EXTRAÍDOS DOS FLYERS) -->
+  <section id="planos" class="bg-zinc-950 py-16 px-4 border-t border-white/10">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <span class="text-brand-gold text-xs font-bold uppercase tracking-widest block mb-2">Tabela Promocional</span>
+        <h2 class="text-3xl md:text-4xl font-black heading-font mb-3">Escolha o Melhor Formato Para Você</h2>
+        <p class="text-slate-400 text-sm max-w-lg mx-auto">Pagamento em até 6x sem juros no cartão ou +10% de desconto à vista no Pix.</p>
+      </div>
+
+      <!-- CARD DESTAQUE: MASTER CLASS EM GRUPO (PORTA DE ENTRADA R$ 230) -->
+      <div class="max-w-xl mx-auto mb-12 bg-gradient-to-r from-amber-950/60 via-brand-deep to-purple-950/60 border-2 border-brand-gold rounded-3xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
+        <div class="inline-block bg-brand-gold text-black font-extrabold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider mb-3">
+          Oferta Especial de Entrada
+        </div>
+        <h3 class="text-2xl font-black heading-font text-white mb-1">Master Class Online (Turmas Fechadas)</h3>
+        <p class="text-slate-300 text-xs md:text-sm mb-4">Aulas em grupos reduzidos de Violão, Violino, Piano ou Canto.</p>
+
+        <div class="flex items-baseline gap-3 mb-4">
+          <span class="text-4xl md:text-5xl font-black text-brand-gold">R$ 230,00</span>
+          <span class="text-slate-400 text-sm">/ pacote de 12 aulas</span>
+        </div>
+
+        <a id="masterClassBtn" href="https://wa.me/5511918476778?text=Olá%20Samuel!%20Quero%20garantir%20minha%20vaga%20na%20Master%20Class%20(R$%20230)%20com%20o%20código%20GOLD-DIAMOND-STUDIOS!" target="_blank" class="block w-full py-3.5 px-6 rounded-xl bg-brand-gold hover:bg-yellow-400 text-black font-bold text-center text-sm uppercase tracking-wider transition shadow-lg">
+          Chamar Samuel e Garantir Vaga
+        </a>
+      </div>
+
+      <!-- GRID DE PLANOS INDIVIDUAIS -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- COLUNA 1: AULAS EM DOMICÍLIO -->
+        <div class="bg-zinc-900/90 border border-white/10 rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-xl font-bold text-white flex items-center gap-2">
+                <span>🏡 Aulas em Domicílio</span>
+              </h4>
+              <span class="bg-purple-900/60 text-purple-300 text-xs font-semibold px-2.5 py-1 rounded-full">Professor Particular</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-6">O professor vai até a sua residência com material didático completo.</p>
+
+            <div class="space-y-3 mb-6">
+              <div class="flex justify-between items-center p-3 rounded-xl bg-white/5">
+                <div>
+                  <div class="font-bold text-sm text-white">Plano GO! <span class="text-xs text-slate-400 font-normal">(02 aulas quinzenais)</span></div>
+                  <div class="text-xs text-slate-400 line-through">De R$ 320</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-brand-gold font-black text-lg">R$ 190</div>
+                  <div class="text-[10px] text-emerald-400">40% OFF</div>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center p-3 rounded-xl bg-white/5">
+                <div>
+                  <div class="font-bold text-sm text-white">Plano Start <span class="text-xs text-slate-400 font-normal">(04 aulas mensais)</span></div>
+                  <div class="text-xs text-slate-400 line-through">De R$ 580</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-brand-gold font-black text-lg">R$ 350</div>
+                  <div class="text-[10px] text-emerald-400">40% OFF</div>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center p-3 rounded-xl bg-brand-gold/10 border border-brand-gold/40">
+                <div>
+                  <div class="font-bold text-sm text-white">Plano Basic <span class="text-xs text-brand-gold font-semibold">(12 aulas) ★ Mais Escolhido</span></div>
+                  <div class="text-xs text-slate-400 line-through">De R$ 1.650</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-brand-gold font-black text-lg">R$ 990</div>
+                  <div class="text-[10px] text-emerald-400">40% OFF</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a id="domicilioBtn" href="https://wa.me/5511918476778?text=Olá%20Samuel!%20Quero%20agendar%20minhas%20aulas%20em%20Domicílio%20com%20o%20código%20GOLD-DIAMOND-STUDIOS!" target="_blank" class="block w-full py-3 px-4 rounded-xl bg-white/10 hover:bg-brand-gold hover:text-black text-white font-bold text-center text-xs uppercase tracking-wider transition">
+            Falar com Samuel (Aulas em Domicílio)
+          </a>
+        </div>
+
+        <!-- COLUNA 2: AULAS ONLINE AO VIVO -->
+        <div class="bg-zinc-900/90 border border-white/10 rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-xl font-bold text-white flex items-center gap-2">
+                <span>💻 Aulas Online Interativas</span>
+              </h4>
+              <span class="bg-emerald-900/60 text-emerald-300 text-xs font-semibold px-2.5 py-1 rounded-full">Gravação Inclusa</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-6">Aulas ao vivo individuais com gravação automática no portal.</p>
+
+            <div class="space-y-3 mb-6">
+              <div class="flex justify-between items-center p-3 rounded-xl bg-white/5">
+                <div>
+                  <div class="font-bold text-sm text-white">Plano GO! Online <span class="text-xs text-slate-400 font-normal">(02 aulas)</span></div>
+                  <div class="text-xs text-slate-400 line-through">De R$ 250</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-brand-gold font-black text-lg">R$ 150</div>
+                  <div class="text-[10px] text-emerald-400">40% OFF</div>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center p-3 rounded-xl bg-white/5">
+                <div>
+                  <div class="font-bold text-sm text-white">Plano Start Online <span class="text-xs text-slate-400 font-normal">(04 aulas)</span></div>
+                  <div class="text-xs text-slate-400 line-through">De R$ 450</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-brand-gold font-black text-lg">R$ 270</div>
+                  <div class="text-[10px] text-emerald-400">40% OFF</div>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center p-3 rounded-xl bg-brand-gold/10 border border-brand-gold/40">
+                <div>
+                  <div class="font-bold text-sm text-white">Plano Basic Online <span class="text-xs text-brand-gold font-semibold">(12 aulas) ★ Mais Escolhido</span></div>
+                  <div class="text-xs text-slate-400 line-through">De R$ 1.280</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-brand-gold font-black text-lg">R$ 770</div>
+                  <div class="text-[10px] text-emerald-400">40% OFF</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a id="onlineBtn" href="https://wa.me/5511918476778?text=Olá%20Samuel!%20Quero%20agendar%20minhas%20aulas%20Online%20com%20o%20código%20GOLD-DIAMOND-STUDIOS!" target="_blank" class="block w-full py-3 px-4 rounded-xl bg-white/10 hover:bg-brand-gold hover:text-black text-white font-bold text-center text-xs uppercase tracking-wider transition">
+            Falar com Samuel (Aulas Online)
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOX DO CÓDIGO DE RASTREAMENTO DO AFILIADO/GESTOR -->
+  <section class="max-w-2xl mx-auto my-12 px-4">
+    <div class="bg-gradient-to-r from-zinc-900 to-brand-deep border border-brand-gold/40 rounded-2xl p-6 text-center shadow-xl">
+      <span class="text-xs text-slate-400 uppercase font-semibold block mb-1">Seu Cupom de Benefício Está Ativo:</span>
+      <div class="inline-flex items-center gap-2 bg-black/60 border border-brand-gold/60 px-4 py-2 rounded-xl my-2">
+        <span class="text-brand-gold font-mono font-black text-lg md:text-xl" id="couponCode">GOLD-DIAMOND-STUDIOS</span>
+        <button onclick="copiarCupom()" class="bg-brand-gold/20 hover:bg-brand-gold/40 text-brand-gold text-xs font-bold py-1 px-2.5 rounded transition">
+          Copiar
+        </button>
+      </div>
+      <p class="text-xs text-slate-300">
+        Este código garante <strong class="text-brand-gold">Isenção da Taxa de Matrícula</strong> + <strong class="text-brand-gold">1 Aula Experimental Gratuita</strong> com o Samuel no WhatsApp.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="max-w-3xl mx-auto py-12 px-4">
+    <h3 class="text-2xl font-black heading-font text-center mb-8">Perguntas Frequentes</h3>
+    
+    <div class="space-y-4">
+      <details class="bg-zinc-900/70 border border-white/10 rounded-xl p-4 cursor-pointer group">
+        <summary class="font-bold text-sm md:text-base text-white flex justify-between items-center">
+          <span>Preciso ter o instrumento em casa antes de começar?</span>
+          <span class="text-brand-gold group-open:rotate-180 transition">▼</span>
+        </summary>
+        <p class="text-xs md:text-sm text-slate-400 mt-3 leading-relaxed">
+          Para a sua primeira aula experimental não é obrigatório ter o instrumento! Nossos professores podem te orientar exatamente sobre qual modelo comprar, de acordo com seu orçamento e objetivos.
+        </p>
+      </details>
+
+      <details class="bg-zinc-900/70 border border-white/10 rounded-xl p-4 cursor-pointer group">
+        <summary class="font-bold text-sm md:text-base text-white flex justify-between items-center">
+          <span>Como funciona a gravação das aulas?</span>
+          <span class="text-brand-gold group-open:rotate-180 transition">▼</span>
+        </summary>
+        <p class="text-xs md:text-sm text-slate-400 mt-3 leading-relaxed">
+          Assim que sua aula termina, ela é processada e disponibilizada no seu Portal do Aluno. Você pode rever detalhes do dedilhado, tirar dúvidas e praticar a qualquer momento da semana.
+        </p>
+      </details>
+
+      <details class="bg-zinc-900/70 border border-white/10 rounded-xl p-4 cursor-pointer group">
+        <summary class="font-bold text-sm md:text-base text-white flex justify-between items-center">
+          <span>Quais são as formas de pagamento?</span>
+          <span class="text-brand-gold group-open:rotate-180 transition">▼</span>
+        </summary>
+        <p class="text-xs md:text-sm text-slate-400 mt-3 leading-relaxed">
+          Aceitamos cartão de crédito em até 6x sem juros ou Pix com 10% de desconto adicional à vista.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 bg-black/80 py-10 px-4 text-center text-xs text-slate-500">
+    <div class="max-w-4xl mx-auto flex flex-col items-center gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-white tracking-widest">COMO TOCA</span>
+        <span>•</span>
+        <a href="https://instagram.com/escolacomotoca" target="_blank" class="text-brand-gold hover:underline">@escolacomotoca</a>
+        <span>•</span>
+        <span>WhatsApp Oficial: (11) 91847-6778 (Central COMO TOCA - Samuel Medeiros 🎻🎸)</span>
+      </div>
+      <p>© 2026 Como Toca - Escola de Música. Todos os direitos reservados. Site Oficial: www.comotoca.com.br</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT DE ATRIBUIÇÃO AUTOMÁTICA VIA URL (?ref=SEUCODIGO) -->
+  <script>
+    // Captura o código da URL ex: index.html?ref=GOLD-DIAMOND-STUDIOS ou usa o padrão oficial
+    const urlParams = new URLSearchParams(window.location.search);
+    const trackingCode = urlParams.get('ref') || urlParams.get('cupom') || 'GOLD-DIAMOND-STUDIOS';
+
+    document.getElementById('topCouponDisplay').innerText = trackingCode;
+    document.getElementById('couponCode').innerText = trackingCode;
+
+    // WhatsApp Alvo Oficial: Central COMO TOCA - Samuel Medeiros (11 91847-6778)
+    const zapPhone = '5511918476778';
+    
+    function makeZapUrl(msg) {
+      return `https://wa.me/${zapPhone}?text=${encodeURIComponent(msg)}`;
+    }
+
+    document.getElementById('headerWhatsappBtn').href = makeZapUrl(`Olá Samuel! Vim pela página de vendas com o código ${trackingCode} e quero minha aula experimental gratuita!`);
+    document.getElementById('mainCtaBtn').href = makeZapUrl(`Olá Samuel! Vim pela página de vendas com o código ${trackingCode} e quero agendar minha aula experimental gratuita!`);
+    document.getElementById('masterClassBtn').href = makeZapUrl(`Olá Samuel! Quero garantir minha vaga na Master Class (R$ 230) com o código ${trackingCode}!`);
+    document.getElementById('domicilioBtn').href = makeZapUrl(`Olá Samuel! Quero agendar minhas aulas em Domicílio com o código ${trackingCode}!`);
+    document.getElementById('onlineBtn').href = makeZapUrl(`Olá Samuel! Quero agendar minhas aulas Online com o código ${trackingCode}!`);
+
+    function copiarCupom() {
+      navigator.clipboard.writeText(trackingCode);
+      alert('Código ' + trackingCode + ' copiado com sucesso! Envie para o Samuel no WhatsApp para garantir seu benefício.');
+    }
+  </script>
+
+</body>
+</html>
